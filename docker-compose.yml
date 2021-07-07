@@ -3,8 +3,10 @@ version: '3'
 services:
   # main application
   triqs_spectrometer:
-    image: triqs_spectrometer
+    image: triqs_spectrometer_production
     build:
       .
     ports:
       - "9375:9375"
+    environment:
+      - PORT=9375
